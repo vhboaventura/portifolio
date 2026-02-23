@@ -1,0 +1,496 @@
+/* ===== Variáveis Globais ===== */
+:root {
+    --main-color: #5A4FCF; /* Azul mais vibrante */
+    --text-color: #2C2C2C; /* Cinza mais escuro */
+    --bg-color-1: #FFFFFF; /* Branco */
+    --bg-color-2: #EAEAEA; /* Cinza mais claro */
+    --color-00: #00000033; /* Preto com mais transparência */
+    --color-01: #3e54a0; /* Cinza mais escuro */
+    --color-02: #7ED957; /* Verde mais vibrante */
+    --color-03: #FF6B6B; /* Rosa mais vibrante */
+    --color-04: #6377ad; /* Laranja mais vibrante */
+    --color-05: #1A1A1A; /* Preto mais escuro */
+}
+
+/* ===== Reset e Estilos Globais ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: "Poppins", serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-color-2);
+    color: var(--text-color);
+}
+
+/* ===== Header ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem;
+    background-color: var(--bg-color-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--text-color); /* Texto escuro para legibilidade */
+    font-weight: 600;
+    cursor: default;
+}
+
+.nav a {
+    font-size: 1.2rem;
+    color: var(--text-color); /* Texto escuro para legibilidade */
+    padding: 0.5rem 1rem;
+    transition: 0.4s;
+}
+
+.nav a:hover {
+    color: var(--main-color);
+}
+
+/* ===== Seção Home com Vídeo de Fundo ===== */
+.home {
+    position: relative;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Evita que o vídeo ultrapasse os limites */
+    background: url('images/fallback-image.jpg') no-repeat center center/cover; /* Fallback com imagem */
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra toda a área */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+.home-content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
+    color: white; /* Texto branco para contrastar com o fundo */
+}
+
+/* Overlay escuro para melhorar a legibilidade do texto */
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay preto com 50% de opacidade */
+    z-index: 0; /* Fica entre o vídeo e o conteúdo */
+}
+
+/* ===== Estilos para os Botões ===== */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2rem;
+    text-align: center;
+    border: 2px solid transparent; /* Adiciona uma borda transparente */
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color); /* Adiciona borda ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Estilo específico para o botão "Baixar CV" */
+.btn-download {
+    background-color: var(--color-02); /* Verde mais vibrante */
+    color: var(--text-color);
+}
+
+.btn-download:hover {
+    background-color: transparent;
+    color: var(--color-02);
+    border-color: var(--color-02);
+}
+
+/* Estilo específico para o botão "Saiba mais" */
+.btn-more {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.btn-more:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* ===== Seção Serviços ===== */
+.services h2, .portfolio h2, .contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.services-box {
+    background-color: var(--bg-color-1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.services-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.services-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.services-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-01);
+    margin-bottom: 1.5rem;
+}
+
+.services-box .btn {
+    margin-top: 1rem;
+}
+
+/* Estilo específico para o card de Machine Learning */
+.services-box.machine-learning {
+    background-color: var(--color-01);
+    color: white;
+}
+
+.services-box.machine-learning h3,
+.services-box.machine-learning p,
+.services-box.machine-learning .btn {
+    color: white;
+}
+
+.services-box.machine-learning .btn:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+
+/* Estilo específico para o card de Arduino */
+.services-box.arduino {
+    background-color: var(--color-04);
+    color: white;
+}
+
+.services-box.arduino h3,
+.services-box.arduino p,
+.services-box.arduino .btn {
+    color: white;
+}
+
+.services-box.arduino .btn:hover {
+    background-color: white;
+    color: var(--color-04);
+}
+
+/* ===== Seção Portfólio ===== */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--main-color));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--text-color);
+    background-color: var(--main-color);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-layer a i:hover {
+    background-color: var(--color-02);
+}
+
+/* ===== Seção Contato ===== */
+.contact {
+    background-color: var(--bg-color-1);
+    padding: 6rem 2rem;
+}
+
+.contact form {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact .input-box input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-01);
+    background-color: var(--bg-color-2);
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.contact .input-box input:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.contact textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-01);
+    background-color: var(--bg-color-2);
+    color: var(--text-color);
+    margin-top: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.contact textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.contact .btn {
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact .btn:hover {
+    background-color: var(--color-02);
+    color: var(--text-color);
+}
+
+/* ===== Seção Sobre ===== */
+.sobre {
+    background-color: var(--bg-color-2);
+    padding: 6rem 2rem;
+}
+
+.sobre-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sobre-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.sobre-content .btn {
+    margin-top: 1.5rem;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color-1);
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--text-color);
+    }
+
+    .home, .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content, .sobre-content {
+        width: 100%;
+    }
+
+    .services-container, .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact .input-box input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+    .contact .btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-container, .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact .input-box input {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media (min-width: 1025px) {
+    .services-container, .portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact .input-box input {
+        width: calc(50% - 0.5rem);
+    }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Victor Boaventura, especialista em Machine Learning, Front-end e Arduino.">
+    <meta name="keywords" content="Machine Learning, Front-end, Arduino, Desenvolvimento Web, Automação">
+    <meta name="author" content="Victor Boaventura">
+    <title>Portfolio - Victor Boaventura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#services">Serviços</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contato</a>
+            <a href="#about">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Home com Vídeo de Fundo -->
+        <section class="home" id="home">
+            <!-- Vídeo de Fundo -->
+            <video autoplay muted loop id="video-background">
+                <source src="img/J59.gif" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+
+            <!-- Conteúdo da Seção Home -->
+            <div class="home-content">
+                <h3>Olá, me chamo</h3>
+                <h1>Victor Boaventura</h1>
+                <h3>Sou especialista em <span>Machine Learning</span>, <span>Front-end</span> e <span>Arduino</span></h3>
+                <p>
+                    Transformo ideias em soluções digitais inovadoras, combinando inteligência artificial, design responsivo e automação com Arduino.
+                </p>
+                <div class="midia-social">
+                    <a href="https://www.linkedin.com/in/victor-boaventura-723207217/" aria-label="LinkedIn" target="_blank">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <a href="https://github.com/vhboaventura" aria-label="GitHub" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://www.instagram.com/vhboaventura/" aria-label="Instagram" target="_blank">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                </div>
+                <a href="docs/Curriculo VictorBoaventura (3)" class="btn" download>Baixar CV</a>
+            </div>
+        </section>
+
+        <!-- Seção Serviços -->
+        <section class="services" id="services">
+            <h2>Meus <span>Serviços</span></h2>
+            <div class="services-container">
+                <!-- Card de Machine Learning -->
+                <div class="services-box machine-learning">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Machine Learning</h3>
+                    <p>
+                        Desenvolvo modelos de machine learning para análise de dados, automação e previsões inteligentes.
+                    </p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+
+                <!-- Card de Front-end -->
+                <div class="services-box">
+                    <i class='bx bxl-dev-to'></i>
+                    <h3>Front-end</h3>
+                    <p>
+                        Crio interfaces modernas e responsivas, focadas na melhor experiência do usuário.
+                    </p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+
+                <!-- Card de Arduino -->
+                <div class="services-box arduino">
+                    <i class='bx bx-chip'></i>
+                    <h3>Arduino</h3>
+                    <p>
+                        Desenvolvo soluções de automação e IoT utilizando Arduino para projetos personalizados.
+                    </p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section class="portfolio" id="portfolio">
+            <h2>Meus <span>Projetos</span></h2>
+            <div class="portfolio-container">
+                <!-- Card de Machine Learning -->
+                <div class="portfolio-box">
+                    <img src="img/img2.webp" alt="Sistema de recomendação personalizado para e-commerce">
+                    <div class="portfolio-layer">
+                        <h4>Machine Learning</h4>
+                        <p>Sistema de recomendação personalizado para e-commerce.</p>
+                        <a href="#"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+
+                <!-- Card de Front-end -->
+                <div class="portfolio-box">
+                    <img src="img/img1.jpg" alt="Plataforma de cursos online com design responsivo">
+                    <div class="portfolio-layer">
+                        <h4>Front-end</h4>
+                        <p>Plataforma de cursos online com design responsivo.</p>
+                        <a href="#"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+
+                <!-- Card de Arduino -->
+                <div class="portfolio-box">
+                    <img src="img/arduino.png" alt="Sistema de automação residencial com Arduino">
+                    <div class="portfolio-layer">
+                        <h4>Arduino</h4>
+                        <p>Sistema de automação residencial com Arduino.</p>
+                        <a href="#"><i class='bx bx-link'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section class="contact" id="contact">
+            <h2>Entre em <span>Contato</span></h2>
+            <form action="#">
+                <div class="input-box">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Nome Completo" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="input-box">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" placeholder="Telefone" required>
+                </div>
+                <div class="input-box">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" placeholder="Assunto" required>
+                </div>
+                <label for="mensagem">Sua mensagem</label>
+                <textarea id="mensagem" cols="30" rows="10" placeholder="Sua mensagem..." required></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <!-- Seção Sobre -->
+        <article class="sobre" id="sobre">
+            <div class="about-content">
+                <h3>Sobre mim</h3>
+                <h1>Desenvolvedor em <span>Machine Learning</span>, <span>Front-end</span> e <span>Arduino</span></h1>
+                <p>
+                    Com mais de 5 anos de experiência, sou apaixonado por criar soluções tecnológicas que impactam positivamente a vida das pessoas.
+                </p>
+                <a href="#" class="btn">Leia mais</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Copyright &copy; 2025 por Victor Boaventura. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
